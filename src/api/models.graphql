@@ -1,10 +1,9 @@
 type User {
-  id: ID!
+  id: Int!
   username: String!
   email: String!
   firstname: String
   lastname: String
-  posts: [Post!]!
   createAt: String
   updateAt: String
 }

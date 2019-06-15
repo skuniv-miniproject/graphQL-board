@@ -1,1 +1,5 @@
-export default {};
+export default {
+  User: {
+    id: () => 123
+  }
+};
