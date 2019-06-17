@@ -5,14 +5,18 @@ import "./env";
 const PORT = process.env.PORT || 4000;
 const typeDefs = `
     type Query {
-        hello(name : String) : String
+        hello(name : String , age : Int) : [String]
     }
 `;
 //api endpoint 구현
 const resolvers = {
   Query: {
-    hello: (_, { name }) => {
-      return name;
+    hello: (_, args) => {
+      const { name, age } = args;
+      const temp = [];
+      temp.push(name);
+      temp.push(age);
+      return temp;
     }
   }
 };
